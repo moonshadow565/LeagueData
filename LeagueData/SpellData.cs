@@ -92,7 +92,7 @@ namespace LeagueData
             castRangeGrowthDuration[0] = ini["SpellData", "CastRangeGrowthDuration"].Float() ?? 0.0f;
             castRadius[0] = ini["SpellData", "CastRadius"].Float() ?? 0.0f;
             castRadiusSecondary[0] = ini["SpellData", "CastRadiusSecondary"].Float() ?? 0.0f;
-            mana[0] = ini["SpellData", "ManaConst1"].Float() ?? 0.0f;
+            mana[0] = ini["SpellData", "ManaCost1"].Float() ?? 0.0f;
 
             for (var i = 1; i < 7; i++)
             {
@@ -106,7 +106,7 @@ namespace LeagueData
                 castRangeGrowthDuration[i] = ini["SpellData", $"CastRangeGrowthDuration{i}"].Float() ?? castRangeGrowthDuration[0];
                 castRadius[i] = ini["SpellData", $"CastRadius{i}"].Float() ?? castRadius[0];
                 castRadiusSecondary[i] = ini["SpellData", $"CastRadiusSecondary{i}"].Float() ?? castRadiusSecondary[0];
-                mana[i] = ini["SpellData", $"ManCost{i}"].Float() ?? mana[0];
+                mana[i] = ini["SpellData", $"ManaCost{i}"].Float() ?? mana[0];
             }
 
             CooldownTime = cooldownTime;
